@@ -1,0 +1,46 @@
+SvgPathD {
+  Exp
+    = D*
+  D
+    = Move | LineTo | CubicBezierCurve | QuadraticBezierCurve | EllipticalArcCurve | ClosePath
+
+  Move
+    = ("M" | "m") point+
+
+  LineTo
+    = ("L" | "l") point+
+    | ("H" | "h" | "V" | "v") digit+
+
+  CubicBezierCurve
+    = ("C" | "c") Vector3+
+    | ("S" | "s") Vector2+
+
+  QuadraticBezierCurve
+    = ("Q" | "q") Vector2+
+    | ("T" | "t") point+
+
+  EllipticalArcCurve
+    = ("A" | "a") ellipticalParameter+
+
+  ClosePath
+    = ("Z" | "z")
+
+  // point angle largeArcFlag sweepFlag point
+  ellipticalParameter
+    = point number binaryNumber binaryNumber point
+
+  Vector2
+    = point ","? point
+
+  Vector3
+    = point ","? point ","? point
+
+  point
+    = number ","? number
+
+  number
+    = ("+" | "-")? (digit | ".")+
+
+  binaryNumber
+    = "0" | "1"
+}
