@@ -12,11 +12,11 @@ SvgPathD {
     | ("H" | "h" | "V" | "v") digit+
 
   CubicBezierCurve
-    = ("C" | "c") Vector3+
-    | ("S" | "s") Vector2+
+    = ("C" | "c") ThreePoints+
+    | ("S" | "s") TwoPoints+
 
   QuadraticBezierCurve
-    = ("Q" | "q") Vector2+
+    = ("Q" | "q") TwoPoints+
     | ("T" | "t") point+
 
   EllipticalArcCurve
@@ -29,10 +29,10 @@ SvgPathD {
   ellipticalParameter
     = point number binaryNumber binaryNumber point
 
-  Vector2
+  TwoPoints
     = point ","? point
 
-  Vector3
+  ThreePoints
     = point ","? point ","? point
 
   point

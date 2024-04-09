@@ -21,8 +21,8 @@ export interface SvgPathDActionDict<T> extends BaseActionDict<T> {
   EllipticalArcCurve?: (this: NonterminalNode, arg0: TerminalNode, arg1: IterationNode) => T;
   ClosePath?: (this: NonterminalNode, arg0: TerminalNode) => T;
   ellipticalParameter?: (this: NonterminalNode, arg0: NonterminalNode, arg1: NonterminalNode, arg2: NonterminalNode, arg3: NonterminalNode, arg4: NonterminalNode) => T;
-  Vector2?: (this: NonterminalNode, arg0: NonterminalNode, arg1: IterationNode, arg2: NonterminalNode) => T;
-  Vector3?: (this: NonterminalNode, arg0: NonterminalNode, arg1: IterationNode, arg2: NonterminalNode, arg3: IterationNode, arg4: NonterminalNode) => T;
+  TwoPoints?: (this: NonterminalNode, arg0: NonterminalNode, arg1: IterationNode, arg2: NonterminalNode) => T;
+  ThreePoints?: (this: NonterminalNode, arg0: NonterminalNode, arg1: IterationNode, arg2: NonterminalNode, arg3: IterationNode, arg4: NonterminalNode) => T;
   point?: (this: NonterminalNode, arg0: NonterminalNode, arg1: IterationNode, arg2: NonterminalNode) => T;
   number?: (this: NonterminalNode, arg0: IterationNode, arg1: IterationNode) => T;
   binaryNumber?: (this: NonterminalNode, arg0: TerminalNode) => T;
