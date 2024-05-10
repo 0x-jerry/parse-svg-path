@@ -29,7 +29,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@0x-jerry/x-release": "^1.0.0",
+    "@0x-jerry/x-release": "^2.0.0",
     "@ohm-js/cli": "^2.0.0",
     "@types/node": "^20.12.2",
     "@vitest/coverage-v8": "^1.4.0",
